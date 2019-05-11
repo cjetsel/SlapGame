@@ -1,0 +1,38 @@
+*{
+  outline: 1px solid red;
+}
+
+body {
+  background-image: url(/assets/img/bg3.jpg);
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.button {
+  justify-content: center;
+}
+
+.eye {
+}
+
+img {
+  height: 87%;
+  align-self: center;
+  justify-self: center;
+}
+
+.elric {
+  background: rgb(0,42,255);
+background: radial-gradient(circle, rgba(0,42,255,0.8707632711287641) 0%, rgba(0,28,170,0.8623599097842262) 8%, rgba(0,14,85,0.7531162123052346) 19%, rgba(0,0,0,0) 47%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.homunculous {
+  background: rgb(255,0,0);
+background: radial-gradient(circle, rgba(255,0,0,0.8707632711287641) 0%, rgba(180,0,0,0.8623599097842262) 8%, rgba(85,0,0,0.7531162123052346) 19%, rgba(0,0,0,0) 47%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
