@@ -103,6 +103,9 @@ function callAlly() {
 
 
 function displayHealth() {
+  if (enemy[enemyIndex].health < 0) {
+    enemy[enemyIndex].health = 0;
+  }
   let progressBar = document.getElementById("enemy-status");
   document.getElementById("enemy-health").innerHTML = enemy[enemyIndex].health;
   progressBar.setAttribute("style", `width: ${enemy[enemyIndex].health}%`);
