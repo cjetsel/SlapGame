@@ -75,6 +75,10 @@ background: radial-gradient(circle, rgba(255,0,0,0.8707632711287641) 0%, rgba(18
   background-position: center;
 }
 
+.enemy-img {
+  margin-top: 2.6rem;
+}
+
 .progress{
   background-color: #363636;
 }
