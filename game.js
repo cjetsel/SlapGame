@@ -28,9 +28,9 @@ let hero = {
 };
 
 let items = {
-  stone: { name: "stone", modifier: -3, description: "Your strength is increased" },
-  repair: { name: "repair", modifier: 2, description: "Quit destroying my handywork!!" },
-  ally: { name: "ally", modifier: -1, description: "Reinforcements have arrived!" }
+  stone: { name: "stone", modifier: -3, description: "Your strength is increased", count: 0 },
+  repair: { name: "repair", modifier: 2, description: "Quit destroying my handywork!!", count: 0 },
+  ally: { name: "ally", modifier: -1, description: "Reinforcements have arrived!", count: 0 }
 };
 
 let enemyIndex = 0;
@@ -79,24 +79,39 @@ function addMods() {
 
 function healthRepair() {
   enemy[enemyIndex].items.push(items.repair);
+  items.repair.count++;
+  if (items.repair.count == 5) {
+    document.getElementById('health-repair').disabled = true;
+  } return items.repair.count;
 }
 
 function stoneActivate() {
   enemy[enemyIndex].items.push(items.stone);
+  items.stone.count++;
+  if (items.stone.count == 5) {
+    document.getElementById('stone-activate').disabled = true;
+  } return items.stone.count;
 }
 
 function callAlly() {
   enemy[enemyIndex].items.push(items.ally);
+  items.ally.count++;
+  if (items.ally.count == 5) {
+    document.getElementById('call-ally').disabled = true;
+  } return items.ally.count;
 }
+
 
 function displayHealth() {
   let progressBar = document.getElementById("enemy-status");
   document.getElementById("enemy-health").innerHTML = enemy[enemyIndex].health;
   progressBar.setAttribute("style", `width: ${enemy[enemyIndex].health}%`);
   document.getElementById("hero-health").innerHTML = hero.health;
+
 };
 
 displayHealth();
+
 
 function displayHits() {
   document.getElementById("enemy-hits").innerHTML = enemy[enemyIndex].hits;
