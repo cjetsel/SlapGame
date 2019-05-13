@@ -88,7 +88,9 @@ function callAlly() {
 }
 
 function displayHealth() {
+  let progressBar = document.getElementById("enemy-status");
   document.getElementById("enemy-health").innerHTML = enemy[enemyIndex].health;
+  progressBar.setAttribute("style", `width: ${enemy[enemyIndex].health}%`);
   document.getElementById("hero-health").innerHTML = hero.health;
 };
 
@@ -119,3 +121,7 @@ function disableButtons() {
     document.getElementById('transmute-weapon').disabled = false;
   }
 }
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})

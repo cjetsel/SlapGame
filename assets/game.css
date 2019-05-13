@@ -82,7 +82,7 @@ background: radial-gradient(circle, rgba(255,0,0,0.8707632711287641) 0%, rgba(18
 
 .fight-toggler {
   transform: translateY(-3vw);
-   background-image: url(/assets/img/circle.jpg);
+   background-image: url(img/circle.jpg);
   background-position: center;
   background-size: 78%;
   background-repeat: no-repeat;

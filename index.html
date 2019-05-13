@@ -19,7 +19,7 @@
     <div class="row justify-content-center logo">
       <div class="col-4"></div>
       <div class="col-4 text-center">
-        <img src="/assets/img/logo.png" class="img-fluid" alt="" id="logo">
+        <img src="assets/img/logo.png" class="img-fluid" alt="" id="logo">
       </div>
       <div class="col-4"></div>
     </div>
@@ -30,23 +30,26 @@
         <div class="row justify-content-center" id="hero-health-bar">
           <div class="col-8">
             <div class="progress">
-              <div class="progress-bar bg-primary" style="width:100%" role="progressbar" aria-valuenow="100"
-                aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width:100%"
+                role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
               </div>
             </div>
           </div>
           <div class="col-8 align-self-center text-center">
-            <p>Health: <span id="hero-health"></span></p>
+            <p class="m-0"> Name: <span id="hero-name">Elric Brothers</span></p>
           </div>
           <div class="col-8 align-self-center text-center">
-            <p>Hits: <span id="hero-hits"></span></p>
+            <p class="m-0">Health: <span id="hero-health"></span></p>
+          </div>
+          <div class="col-8 align-self-center text-center">
+            <p class="m-0">Hits: <span id="hero-hits"></span></p>
           </div>
         </div>
         <div class="row">
           <div class="col-12">
             <div class="row">
               <div class="col-12 hero text-center">
-                <img src="/assets/img/brothers2.png" alt="elric" id="hero-img" class="img-fluid mx-auto hero-padding">
+                <img src="assets/img/brothers2.png" alt="elric" id="hero-img" class="img-fluid mx-auto hero-padding">
               </div>
             </div>
           </div>
@@ -61,35 +64,41 @@
             <div class="col"></div>
             <div class="col"></div>
             <div class="col">
-              <button class="btn top-icon" id="transmute-weapon" onclick="transmute()" aria-disabled="true"><img
-                  src="/assets/img/sword.png" class="img-fluid" alt=""></button>
+              <button class="btn top-icon" id="transmute-weapon" onclick="transmute()" aria-disabled="true"
+                data-toggle="tooltip" data-placement="top" title="Transmute Sword"><img src="assets/img/sword.png"
+                  class="img-fluid" alt=""></button>
             </div>
             <div class="col"></div>
             <div class="col"></div>
           </div>
           <div class="row">
             <div class="col toppy-left pr-0">
-              <button class="btn toppytoppy" id="transmute-cannon" onclick="cannon()" aria-disabled="true"><img
-                  src="/assets/img/cannon.png" class="img-fluid" alt=""></button>
-              <button class="btn" id="transmute-staff" onclick="staff()" aria-disabled="true"><img
-                  src="/assets/img/bomb.png" class="img-fluid" alt=""></button>
+              <button class="btn toppytoppy" id="transmute-cannon" onclick="cannon()" aria-disabled="true"
+                data-toggle="tooltip" data-placement="left" title="Fire Face Cannon"><img src="assets/img/cannon.png"
+                  class="img-fluid" alt=""></button>
+              <button class="btn" id="transmute-staff" onclick="staff()" aria-disabled="true" data-toggle="tooltip"
+                data-placement="left" title="Transmute Staff"><img src="assets/img/bomb.png" class="img-fluid"
+                  alt=""></button>
             </div>
             <div class="col p-0">
               <div class="rounded-circle gif mx-auto my-auto"></div>
             </div>
             <div class="col toppy-right pl-0">
-              <button class="btn toppytoppy" id="health-repair" onclick="healthRepair()" aria-disabled="true">
-                <img src="/assets/img/heal.png" class="img-fluid" alt=""></button>
-              <button class="btn" id="call-ally" onclick="callAlly()" aria-disabled="true">
-                <img src="/assets/img/ally.png" class="img-fluid" alt=""></button>
+              <button class="btn toppytoppy" id="health-repair" onclick="healthRepair()" aria-disabled="true"
+                data-toggle="tooltip" data-placement="right" title="Enemy Heal">
+                <img src="assets/img/heal.png" class="img-fluid" alt=""></button>
+              <button class="btn" id="call-ally" onclick="callAlly()" aria-disabled="true" data-toggle="tooltip"
+                data-placement="right" title="Summon Humunculi">
+                <img src="assets/img/ally.png" class="img-fluid" alt=""></button>
             </div>
           </div>
           <div class="row">
             <div class="col"></div>
             <div class="col"></div>
             <div class="col">
-              <button class="btn bottom-icon" id="stone-activate" onclick="stoneActivate()" aria-disabled="true"><img
-                  src="/assets/img/ring.png" class="img-fluid" alt=""></button>
+              <button class="btn bottom-icon" id="stone-activate" onclick="stoneActivate()" aria-disabled="true"
+                data-toggle="tooltip" data-placement="bottom" title="Use Philosopher's Stone"><img
+                  src="assets/img/ring.png" class="img-fluid" alt=""></button>
             </div>
             <div class="col"></div>
             <div class="col"></div>
@@ -100,21 +109,25 @@
         <div class="row justify-content-center">
           <div class="col-8 align-self-center" id="enemy-health-bar">
             <div class="progress">
-              <div class="progress-bar bg-danger" style="width:100%" id="enemy-status" role="progressbar"
-                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 100%"
+                id="enemy-status" role="progressbar" aria-valuenow="enemy[enemyIndex].health" aria-valuemin="0"
+                aria-valuemax="100">
               </div>
             </div>
           </div>
           <div class="col-8 align-self-center text-center">
-            <p>Health: <span id="enemy-health"></span></p>
+            <p class="m-0"> Name: <span id="enemy-name">Lust</span></p>
           </div>
           <div class="col-8 align-self-center text-center">
-            <p>Hits: <span id="enemy-hits"></span></p>
+            <p class="m-0"> Health: <span id="enemy-health"></span></p>
+          </div>
+          <div class="col-8 align-self-center text-center">
+            <p class="m-0">Hits: <span id="enemy-hits"></span></p>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-12 enemy align-self-center text-center">
-            <img src="/assets/img/lust.png" alt="enemy-img" class="mx-auto img-fluid">
+            <img src="assets/img/lust.png" alt="enemy-img" class="mx-auto img-fluid">
           </div>
           <div class="col-8 text-center">
             <h3>Lust</h3>
