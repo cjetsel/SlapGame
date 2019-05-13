@@ -40,11 +40,14 @@ body {
 .button {
   justify-content: center;
 }
-
-.gif {
+.size {
   height: 19vw;
   width: 19vw;
 }
+
+/*.gif {
+  background-image: url("assets/img/death.gif");
+}*/
 
 .spacer {
   margin-top: 8.9vh;
