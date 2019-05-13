@@ -119,19 +119,3 @@ function disableButtons() {
     document.getElementById('transmute-weapon').disabled = false;
   }
 }
-
-
-//pseudo code
-
-
-
-// usage: buffs can only be used 3* each , at which point the corresponding button is disbled
-
-//health fx
-
-//displayHealth
-
-//
-
-// timer function: all buttons are set to a 5 second interval between click.
-
